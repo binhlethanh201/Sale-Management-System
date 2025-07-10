@@ -1,61 +1,72 @@
-# Getting Started with Java Project
+# JAVA Project
 
-This project was bootstrapped with Java.
+This project is an Order Management System implemented in Java. It demonstrates the use of classic data structures (such as Binary Search Trees) and object-oriented programming to manage customers, products, and orders. The system provides a menu-driven interface for managing and processing orders, customers, and products.
 
-## Available Commands
+## Prerequisites
 
-In the project directory, you can run:
+- Java Development Kit (JDK) 8 or higher
+- (Optional) An IDE like IntelliJ IDEA, Eclipse, or VS Code for easier code navigation
 
-### `mvn clean install`
+## Installation
 
-Builds the project and installs the package into the local repository.\
-This command compiles the code, runs tests, and packages the application.
+1. **Clone the repository** (if not already downloaded):
+   ```sh
+   git clone <repository-url>
+   cd Sale-Management-System-main
+   ```
+2. **Compile the source code:**
+   Use the following command from the project root to compile all Java files:
+   ```sh
+   javac -d target/classes src/asm/*.java
+   ```
+   This will compile the Java files and place the `.class` files in the `target/classes` directory.
 
-### `mvn spring-boot:run`
+   Alternatively, if you use Maven, you can build the project with:
+   ```sh
+   mvn clean package
+   ```
 
-Runs the application in the development mode.\
-Open [http://localhost:8080](http://localhost:8080) to view it in your browser.
+## How to Run
 
-The application will reload when you make changes.\
-You may also see any errors in the console.
+After compiling, run the main class to start the Order Management System. For example:
 
-### `mvn test`
+```sh
+java -cp target/classes asm.Asm
+```
 
-Launches the test runner.\
-This command runs all the tests in the project.
+Or, if you built with Maven, you can run the generated JAR:
 
-### `mvn package`
+```sh
+java -jar target/asm-1.0-SNAPSHOT.jar
+```
 
-Packages the application into a JAR file.\
-The JAR file will be created in the `target` directory.
+## Project Structure
 
-### `mvn clean`
+```
+Sale-Management-System-main/
+├── src/
+│   └── asm/
+│       ├── Asm.java           # Main entry point
+│       ├── Customer.java      # Customer entity
+│       ├── Menu.java          # Menu system
+│       ├── MenuManager.java   # Menu management logic
+│       ├── MyList.java        # Custom list implementation
+│       ├── Ordering.java      # Order management
+│       ├── Product.java       # Product entity
+│       ├── Validate.java      # Input validation
+│       └── run.bat            # Batch file to run the program (Windows)
+├── src/file/                  # Data files (Customers, Orders, Products)
+├── target/                    # Compiled classes and JAR output
+├── README.md                  # Project documentation
+└── ... (other project and build files)
+```
 
-Cleans the project by deleting the `target` directory.\
-This command is useful for ensuring a fresh build.
+- The `asm` package contains all the main Java source files for the Order Management System.
+- The `file` directory contains sample data files for customers, orders, and products.
+- The `target` directory contains compiled classes and the packaged JAR after building.
 
 ## Learn More
 
-You can learn more in the [Maven documentation](https://maven.apache.org/guides/index.html).
-
-To learn Spring Boot, check out the [Spring Boot documentation](https://spring.io/projects/spring-boot).
-
-### Dependency Management
-
-This section has moved here: [Maven Dependency Management](https://maven.apache.org/guides/introduction/introduction-to-dependency-mechanism.html)
-
-### Building an Executable JAR
-
-This section has moved here: [Spring Boot Executable JAR](https://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-executable-jar.html)
-
-### Advanced Configuration
-
-This section has moved here: [Maven Advanced Configuration](https://maven.apache.org/guides/introduction/introduction-to-the-pom.html)
-
-### Deployment
-
-This section has moved here: [Spring Boot Deployment](https://spring.io/guides/gs/spring-boot/)
-
-### Troubleshooting
-
-This section has moved here: [Maven Troubleshooting](https://maven.apache.org/guides/introduction/introduction-to-troubleshooting.html)
+- [Java Documentation](https://docs.oracle.com/javase/tutorial/)
+- [How to Compile and Run Java](https://www.oracle.com/java/technologies/javase/codeconventions-137265.html)
+- For questions or contributions, please open an issue or pull request.
